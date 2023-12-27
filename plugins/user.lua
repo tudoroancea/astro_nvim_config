@@ -47,4 +47,19 @@ return {
           vim.cmd.colorscheme 'dracula'
       end
   },
+  -- { -- further customize the options set by the community
+  --   "zbirenbaum/copilot.lua",
+  --   opts = {
+  --       suggestion = {
+  --         keymap = {
+  --           accept = "<cr>",
+  --           accept_word = false,
+  --           accept_line = false,
+  --           next = "<c-.>",
+  --           prev = "<c-,>",
+  --           dismiss = "<c/>",
+  --         },
+  --       },
+  --   },
+  -- },
 }
