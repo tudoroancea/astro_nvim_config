@@ -47,6 +47,26 @@ return {
           vim.cmd.colorscheme 'dracula'
       end
   },
+  {
+      "rose-pine/neovim",
+      name = "rose-pine" ,
+      lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+      priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            local rose_pine = require 'rose-pine'
+            rose_pine.setup({
+                variant = 'moon',
+                colorscheme = 'base16',
+            })
+            vim.cmd.colorscheme 'rose-pine'
+        end
+  },
+  {
+      "xiyaowong/transparent.nvim",
+      enabled = true,
+      lazy = false,
+      priority = 1000,
+  }
   -- { -- further customize the options set by the community
   --   "zbirenbaum/copilot.lua",
   --   opts = {
