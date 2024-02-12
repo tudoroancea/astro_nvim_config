@@ -66,7 +66,13 @@ return {
       enabled = true,
       lazy = false,
       priority = 1000,
-  }
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
   -- { -- further customize the options set by the community
   --   "zbirenbaum/copilot.lua",
   --   opts = {
